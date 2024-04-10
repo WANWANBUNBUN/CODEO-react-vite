@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="fixed bg-white opacity-90 rounded-tl-[7vw] rounded-tr-[7vw] h-16">
       <div className="footerIcons">
-        <a href="/home">
+        <a href="/">
           <img src="../images/home.svg" alt="home" />{" "}
         </a>
-        <a href={"./textbook/textbook"}>
+        <a href="/textbook">
           <img
             src="../images/textbook.svg"
             alt="textbook "
