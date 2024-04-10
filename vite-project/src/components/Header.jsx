@@ -9,7 +9,7 @@ export default function Header() {
               <div className="text-4xl font-bold">Zabel</div>
             </div>
             <div className="logo">
-              <img src="../images/CODEO.png" alt="logo" class="h-16 m-8" />
+              <img src="../images/CODEO.png" alt="logo" className="h-16 m-8" />
             </div>
           </section>
         </header>{" "}

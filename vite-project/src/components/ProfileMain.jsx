@@ -1,29 +1,40 @@
+const topics = [
+  { name: "HTML", progress: "100" },
+  { name: "CSS", progress: "50" },
+];
+
 export default function ProfileMain() {
-    return (
-        <>
-        <main className="flex flex-col items-center justify-center text-white">
-        
+  return (
+    <>
+      <main className="flex flex-col items-center justify-center text-white">
         <div className="mt-48 mb-10 justify-start">
-          
           <h2 className="p-1">Statistic</h2>
           <div
             id="statistic"
-            className="rounded-2xl h-36 w-72 p-9 shadow-sm bg-white mt-2 opacity-90"
-          ></div>
-          
+            className="rounded-2xl h-36 w-72 p-9 shadow-sm font-mono font-bold text-black bg-white mt-2 opacity-90"
+          >
+            {topics.map((topic, index) => (
+              <div key={index} className="mb-4">
+                <h3>{topic.name}</h3>
+                <div className="w-40 h-2 bg-gray-200 rounded-full overflow-hidden relative ">
+                  <div
+                    className="h-full bg-blue-500 rounded-full"
+                    style={{ width: `${topic.progress}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div id="setting" className="mt-2">
             <h2 className="p-1">Setting</h2>
             <a href="account.html">
-              <div
-                className="bg-white mt-2 rounded-full w-72  text-center py-2 cursor-pointer text-black font-bold"
-              >
+              <div className="bg-white mt-2 rounded-full w-72  text-center py-2 cursor-pointer text-black font-bold">
                 <h3 className="">Account Edit</h3>
-              </div></a>
-            
-           
-            <div
-              className="bg-white rounded-2xl w-72 text-start py-2 cursor-pointer text-black font-bold p-6 mt-2"
-            >
+              </div>
+            </a>
+
+            <div className="bg-white rounded-2xl w-72 text-start py-2 cursor-pointer text-black font-bold p-6 mt-2">
               <div className="flex justify-between items-center">
                 <h3>Reminder</h3>
                 <input
@@ -43,26 +54,21 @@ export default function ProfileMain() {
                 />
               </div>
             </div>
-            
+
             <a href="contact.html">
-              <div
-                className="bg-white mt-2 rounded-full w-72  text-center py-2 cursor-pointer text-black font-bold"
-              >
+              <div className="bg-white mt-2 rounded-full w-72  text-center py-2 cursor-pointer text-black font-bold">
                 <h3>Contact</h3>
-              </div></a
-            >
+              </div>
+            </a>
           </div>
         </div>
 
-        
         <a href="x">
-          <button
-            className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full mb-20"
-          >
+          <button className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full mb-20">
             Sign out
           </button>
         </a>
       </main>
-      </>
-    );
-  }
+    </>
+  );
+}

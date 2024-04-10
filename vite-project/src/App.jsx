@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Profile from "./components/profile/Profile";
 import Game from "./components/game/Game";
 import Level from "./components/Level";
+import Textbook from "./components/textbook/Textbook";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/game" element={<Game />} />
         <Route path="/level" element={<Level />} />
+        <Route path="/textbook" element={<Textbook />} />
       </Routes>
     </>
   );

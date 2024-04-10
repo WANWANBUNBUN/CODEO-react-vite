@@ -59,3 +59,11 @@ footer {
 .ops {
   @apply bg-gray-500 text-white rounded-full w-full px-6 py-2 m-2.5;
 }
+
+/* level page */
+.moveIcon {
+  position: absolute;
+  top: 6%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
